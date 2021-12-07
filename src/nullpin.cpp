@@ -30,7 +30,6 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "branch_pred.h"
 #include "pin.H"
 #include <iostream>
 #include <stdio.h>
@@ -72,8 +71,8 @@ int main(int argc, char **argv) {
   /* initialize symbol processing */
   PIN_InitSymbols();
 
-  /* initialize PIN; optimized branch */
-  if (unlikely(PIN_Init(argc, argv))) {
+  /* initialize PIN */
+  if (PIN_Init(argc, argv)) {
     std::cerr
         << "Sth error in PIN_Init. Plz use the right command line options."
         << std::endl;
