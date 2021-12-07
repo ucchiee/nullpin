@@ -1,3 +1,5 @@
+pin-root := `pwd`/`ls -d */ | grep pin- | cut -d "/" -f 1`
+
 .PHONY: build clean
 
 build:
