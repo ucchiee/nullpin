@@ -1,2 +1,3 @@
 pin-*
 src/makefile
+compile_commands.json
