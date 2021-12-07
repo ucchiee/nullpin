@@ -28,9 +28,9 @@ echo "Please set:"
 echo "export PIN_ROOT=${PREFIX}/${TAR_NAME}"
 
 # create symlink
-pin_dir=`ls -d */ | grep pin- | cut -d "/" -f 1`
-cur_dir=`pwd`
-pin_makefile='$"cur_dir"/$"pin-root"/source/tools/MyPinTool/makefile'
+PINDIR=`ls -d */ | grep pin- | cut -d "/" -f 1`
+CURDIR=`pwd`
+pin_makefile="$CURDIR/$PINDIR/source/tools/MyPinTool/makefile"
 mkdir -p src
 ln -fs "$pin_makefile" src/makefile
 echo "created symlink to src/makefile"
